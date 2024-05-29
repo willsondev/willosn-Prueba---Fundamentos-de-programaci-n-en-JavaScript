@@ -55,14 +55,14 @@ function renderSuperHeroCards(superHeroData) {
                 <img src="${superHeroData.image}" class="card-img-top" alt="${name}">
                 <div class="card-body">
                     <h5 class="card-title">${name}</h5>                    
-                    <h6 class="card-subtitle mb-2 text-muted">Powerstats</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Estadísticas de energía</h6>
                     <p>
-                        Intelligence: ${superHeroData.powerstats.intelligence}<br>
-                        Strength: ${superHeroData.powerstats.strength}<br>
-                        Speed: ${superHeroData.powerstats.speed}<br>
-                        Durability: ${superHeroData.powerstats.durability}<br>
-                        Power: ${superHeroData.powerstats.power}<br>
-                        Combat: ${superHeroData.powerstats.combat}
+                        Inteligencia: ${superHeroData.powerstats.intelligence}<br>
+                        Fortaleza: ${superHeroData.powerstats.strength}<br>
+                        Velocidad: ${superHeroData.powerstats.speed}<br>
+                        Durabilidad: ${superHeroData.powerstats.durability}<br>
+                        Poder: ${superHeroData.powerstats.power}<br>
+                        Combate: ${superHeroData.powerstats.combat}
                     </p>
                 </div>
                 <div id="chart-${name.replace(/\s/g, '-')}" style="height: 200px; width: 100%;"></div>
@@ -76,7 +76,7 @@ function renderSuperHeroCards(superHeroData) {
         animationEnabled: true,
         theme: "light2",
         title: {
-            text: `${name} Powerstats`
+            text: `${name} Estadísticas de energía`
         },
         axisY: {
             maximum: 100,
@@ -85,12 +85,12 @@ function renderSuperHeroCards(superHeroData) {
         data: [{
             type: "bar",
             dataPoints: [
-                { label: "Intelligence", y: parseInt(superHeroData.powerstats.intelligence), color: getBarColor(parseInt(superHeroData.powerstats.intelligence)) },
-                { label: "Strength", y: parseInt(superHeroData.powerstats.strength), color: getBarColor(parseInt(superHeroData.powerstats.strength)) },
-                { label: "Speed", y: parseInt(superHeroData.powerstats.speed), color: getBarColor(parseInt(superHeroData.powerstats.speed)) },
-                { label: "Durability", y: parseInt(superHeroData.powerstats.durability), color: getBarColor(parseInt(superHeroData.powerstats.durability)) },
-                { label: "Power", y: parseInt(superHeroData.powerstats.power), color: getBarColor(parseInt(superHeroData.powerstats.power)) },
-                { label: "Combat", y: parseInt(superHeroData.powerstats.combat), color: getBarColor(parseInt(superHeroData.powerstats.combat)) }
+                { label: "Inteligencia", y: parseInt(superHeroData.powerstats.intelligence), color: getBarColor(parseInt(superHeroData.powerstats.intelligence)) },
+                { label: "Fortaleza", y: parseInt(superHeroData.powerstats.strength), color: getBarColor(parseInt(superHeroData.powerstats.strength)) },
+                { label: "Velocidad", y: parseInt(superHeroData.powerstats.speed), color: getBarColor(parseInt(superHeroData.powerstats.speed)) },
+                { label: "Durabilidad", y: parseInt(superHeroData.powerstats.durability), color: getBarColor(parseInt(superHeroData.powerstats.durability)) },
+                { label: "Poder", y: parseInt(superHeroData.powerstats.power), color: getBarColor(parseInt(superHeroData.powerstats.power)) },
+                { label: "Combate", y: parseInt(superHeroData.powerstats.combat), color: getBarColor(parseInt(superHeroData.powerstats.combat)) }
             ]
         }]
     });
